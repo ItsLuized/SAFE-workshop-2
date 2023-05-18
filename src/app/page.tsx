@@ -1,25 +1,38 @@
-import { Account } from '../components/Account'
-import { Connect } from '../components/Connect'
-import { Connected } from '../components/Connected'
-import { ERC20 } from '../components/ERC20'
-import { NetworkSwitcher } from '../components/NetworkSwitcher'
+import { Account } from "../components/Account";
+import { Connect } from "../components/Connect";
+import { Connected } from "../components/Connected";
+import { NetworkSwitcher } from "../components/NetworkSwitcher";
+import { SendXDaiTrx } from "../components/SendXDaiTrx";
+import { TrxHistory } from "../components/TrxHistory";
+import { SendHoprTrx } from "../components/sendHoprTrx";
+import { SendmHoprTrx } from "../components/sendmHoprTrx";
+import { SendwxHoprTrx } from "../components/sendwxHoprTrx";
 
 export function Page() {
   return (
     <>
-      <h1>wagmi + Next.js + @wagmi/cli (ERC20)</h1>
+      <h1>SAFE Workshop #2</h1>
 
       <Connect />
 
       <Connected>
+        <hr />
         <Account />
         <hr />
-        <ERC20 />
+        <SendXDaiTrx />
+        <hr />
+        <SendHoprTrx />
+        <hr />
+        <SendwxHoprTrx />
+        <hr />
+        <SendmHoprTrx />
+        <hr />
+        <TrxHistory />
         <hr />
         <NetworkSwitcher />
       </Connected>
     </>
-  )
+  );
 }
 
-export default Page
+export default Page;
